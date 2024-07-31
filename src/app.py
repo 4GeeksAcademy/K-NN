@@ -4,7 +4,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import json
 import sqlite3
-import pandas as pd
 url_movies = "https://raw.githubusercontent.com/4GeeksAcademy/k-nearest-neighbors-project-tutorial/main/tmdb_5000_movies.csv"
 url_credits = "https://raw.githubusercontent.com/4GeeksAcademy/k-nearest-neighbors-project-tutorial/main/tmdb_5000_credits.csv"
 
@@ -20,7 +19,7 @@ df_credits.to_csv('../data/raw/credits-movie.csv', index = False)
 print(data_movies)
 print(data_credits)
 # # Print the columns of the DataFrames
-# print("data_movies columns:", data_movies.columns)
+print("data_movies columns:", data_movies.columns)
 # print("data_credits columns:", data_credits.columns)
 # # Ensure 'id' column exists in data_movies
 # if 'id' not in data_movies.columns:
@@ -53,3 +52,7 @@ except Exception as e:
     print("Error executing query:", e)
 # Close the database connection
 conn.close()
+
+
+-------------------------------
+
